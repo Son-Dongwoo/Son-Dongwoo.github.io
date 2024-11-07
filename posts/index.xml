@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on dnd-qodqks&#39;s blog</title>
-    <link>https://dnd-qodqks.github.io/posts/</link>
-    <description>Recent content in Posts on dnd-qodqks&#39;s blog</description>
+    <title>Posts on Dongwoo&#39;s blog</title>
+    <link>https://Son-Dongwoo.github.io/posts/</link>
+    <description>Recent content in Posts on Dongwoo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 31 Oct 2024 04:10:42 +0900</lastBuildDate>
-    <atom:link href="https://dnd-qodqks.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://Son-Dongwoo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Test</title>
-      <link>https://dnd-qodqks.github.io/posts/test/</link>
+      <link>https://Son-Dongwoo.github.io/posts/test/</link>
       <pubDate>Thu, 31 Oct 2024 04:10:42 +0900</pubDate>
-      <guid>https://dnd-qodqks.github.io/posts/test/</guid>
+      <guid>https://Son-Dongwoo.github.io/posts/test/</guid>
       <description>&lt;p&gt;안녕하세요. 웅뱅반입니다.&lt;/p&gt;</description>
     </item>
   </channel>
