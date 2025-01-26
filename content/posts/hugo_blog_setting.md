@@ -1,6 +1,6 @@
 +++
 date = '2025-01-27T05:53:09+09:00'
-draft = true
+draft = false
 title = 'Hugo를 이용한 Git Blog 구축하기'
 +++
 

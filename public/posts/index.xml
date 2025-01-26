@@ -6,8 +6,90 @@
     <description>Recent content in Posts on Son-Dongwoo&#39;s Blog</description>
     <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Jan 2025 05:18:46 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jan 2025 05:53:09 +0900</lastBuildDate>
     <atom:link href="https://son-dongwoo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo를 이용한 Git Blog 구축하기</title>
+      <link>https://son-dongwoo.github.io/posts/hugo_blog_setting/</link>
+      <pubDate>Mon, 27 Jan 2025 05:53:09 +0900</pubDate>
+      <guid>https://son-dongwoo.github.io/posts/hugo_blog_setting/</guid>
+      <description>&lt;ul&gt;
+&lt;li&gt;Hugo를 선택한 이유: 속도가 가장 빠르니께!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;도구&lt;/th&gt;
+          &lt;th&gt;속도&lt;/th&gt;
+          &lt;th&gt;커스터마이징&lt;/th&gt;
+          &lt;th&gt;쉬운 설치&lt;/th&gt;
+          &lt;th&gt;테마 다양성&lt;/th&gt;
+          &lt;th&gt;추천 사용 사례&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Hugo&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;🔥 빠름&lt;/td&gt;
+          &lt;td&gt;중간&lt;/td&gt;
+          &lt;td&gt;간단&lt;/td&gt;
+          &lt;td&gt;많음&lt;/td&gt;
+          &lt;td&gt;빠른 블로그 생성&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Gatsby&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;중간&lt;/td&gt;
+          &lt;td&gt;매우 높음&lt;/td&gt;
+          &lt;td&gt;약간 복잡&lt;/td&gt;
+          &lt;td&gt;많음&lt;/td&gt;
+          &lt;td&gt;React 기반 웹사이트&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Hexo&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;빠름&lt;/td&gt;
+          &lt;td&gt;중간&lt;/td&gt;
+          &lt;td&gt;간단&lt;/td&gt;
+          &lt;td&gt;많음&lt;/td&gt;
+          &lt;td&gt;간단한 블로그&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Next.js&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;중간&lt;/td&gt;
+          &lt;td&gt;매우 높음&lt;/td&gt;
+          &lt;td&gt;복잡&lt;/td&gt;
+          &lt;td&gt;없음&lt;/td&gt;
+          &lt;td&gt;동적 웹사이트&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Zola&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;빠름&lt;/td&gt;
+          &lt;td&gt;중간&lt;/td&gt;
+          &lt;td&gt;간단&lt;/td&gt;
+          &lt;td&gt;적음&lt;/td&gt;
+          &lt;td&gt;직관적 블로그&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;Pelican&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;중간&lt;/td&gt;
+          &lt;td&gt;중간&lt;/td&gt;
+          &lt;td&gt;간단&lt;/td&gt;
+          &lt;td&gt;적음&lt;/td&gt;
+          &lt;td&gt;Python 활용 블로그&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;1-git-설치&#34;&gt;1. Git 설치&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;https://git-scm.com/&#34;&gt;Git 공식 사이트&lt;/a&gt;에서 Windows용 설치 파일 다운로드 및 실행. (Git-2.47.1.2-64-bit)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-hugo-설치&#34;&gt;2. &lt;strong&gt;Hugo 설치&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Windows&lt;/strong&gt;:
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/gohugoio/hugo/releases&#34;&gt;Hugo Releases 페이지&lt;/a&gt;에서 Windows용 설치 파일을 다운로드. (hugo_extended_0.142.0_windows-amd64.zip)&lt;/p&gt;</description>
+    </item>
     <item>
       <title>My First Post</title>
       <link>https://son-dongwoo.github.io/posts/my-first-post/</link>
