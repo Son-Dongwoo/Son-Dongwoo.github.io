@@ -37,7 +37,7 @@ title = 'Hugo를 이용한 Git Blog 구축하기'
         
     3. 환경 변수를 설정해 `hugo` 명령어를 사용할 수 있도록 설정.
         
-        ![image.png](images/image%201.png)
+        ![image.png](images/image-1.png)
         
     4. 설치 후 Hugo가 정상적으로 설치되었는지 확인:
         
@@ -250,7 +250,7 @@ theme = "PaperMod"
             - GitHub Repository의 **Settings** → **Pages**로 이동
             - Branch를 `gh-pages` 브랜치로 설정
             
-            ![image.png](images/image%202.png)
+            ![image.png](images/image-2.png)
             
     
 
