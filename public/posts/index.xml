@@ -10,9 +10,9 @@
     <atom:link href="https://son-dongwoo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo를 이용한 Git Blog 구축하기</title>
-      <link>https://son-dongwoo.github.io/posts/hugo_blog_setting/hugo_blog_setting/</link>
+      <link>https://son-dongwoo.github.io/posts/hugo_blog_setting/</link>
       <pubDate>Mon, 27 Jan 2025 05:53:09 +0900</pubDate>
-      <guid>https://son-dongwoo.github.io/posts/hugo_blog_setting/hugo_blog_setting/</guid>
+      <guid>https://son-dongwoo.github.io/posts/hugo_blog_setting/</guid>
       <description>&lt;ul&gt;
 &lt;li&gt;Hugo를 선택한 이유: 속도가 가장 빠르니께!&lt;/li&gt;
 &lt;/ul&gt;
