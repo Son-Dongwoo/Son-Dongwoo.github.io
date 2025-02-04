@@ -305,7 +305,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h1 id=&#34;2-파라미터-설명&#34;&gt;2. 파라미터 설명&lt;/h1&gt;
-&lt;h2 id=&#34;21-기본-설정&#34;&gt;&lt;strong&gt;2.1. 기본 설정&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;21-기본-설정&#34;&gt;&lt;strong&gt;2.1.&lt;/strong&gt; 기본 설정&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -353,7 +353,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;22-html-파일-최적화-minification-minify&#34;&gt;&lt;strong&gt;2.2. HTML 파일 최적화 (Minification,&lt;/strong&gt; &lt;code&gt;[minify]&lt;/code&gt;&lt;strong&gt;)&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;22-html-파일-최적화-minification-minify&#34;&gt;&lt;strong&gt;2.2.&lt;/strong&gt; HTML 파일 최적화 (Minification,** &lt;code&gt;[minify]&lt;/code&gt;**)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -373,8 +373,8 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;23-hugo-테마-및-사이트-전반적인-설정-params&#34;&gt;&lt;strong&gt;2.3. Hugo 테마 및 사이트 전반적인 설정 (&lt;code&gt;[params]&lt;/code&gt;)&lt;/strong&gt;&lt;/h2&gt;
-&lt;h3 id=&#34;231-블로그-메타정보&#34;&gt;&lt;strong&gt;2.3.1 블로그 메타정보&lt;/strong&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;23-hugo-테마-및-사이트-전반적인-설정-params&#34;&gt;&lt;strong&gt;2.3.&lt;/strong&gt; Hugo 테마 및 사이트 전반적인 설정 (&lt;code&gt;[params]&lt;/code&gt;)&lt;/h2&gt;
+&lt;h3 id=&#34;231-블로그-메타정보&#34;&gt;&lt;strong&gt;2.3.1&lt;/strong&gt; 블로그 메타정보&lt;/h3&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -409,7 +409,7 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;232-블로그-테마-및-ui-설정&#34;&gt;&lt;strong&gt;2.3.2 블로그 테마 및 UI 설정&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;232-블로그-테마-및-ui-설정&#34;&gt;&lt;strong&gt;2.3.2&lt;/strong&gt; 블로그 테마 및 UI 설정&lt;/h3&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -497,7 +497,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;24-네비게이션-메뉴-설정-menumain&#34;&gt;&lt;strong&gt;2.4. 네비게이션 메뉴 설정 (&lt;code&gt;[[menu.main]]&lt;/code&gt;)&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;24-네비게이션-메뉴-설정-menumain&#34;&gt;&lt;strong&gt;2.4.&lt;/strong&gt; 네비게이션 메뉴 설정 (&lt;code&gt;[[menu.main]]&lt;/code&gt;)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -525,7 +525,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;25-사이트-아이콘-설정&#34;&gt;&lt;strong&gt;2.5. 사이트 아이콘 설정&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;25-사이트-아이콘-설정&#34;&gt;&lt;strong&gt;2.5.&lt;/strong&gt; 사이트 아이콘 설정&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -565,7 +565,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;26-블로그-상단-로고-및-텍스트-설정&#34;&gt;&lt;strong&gt;2.6&lt;/strong&gt;. 블로그 상단 로고 및 텍스트 설정&lt;/h2&gt;
+&lt;h2 id=&#34;26-블로그-상단-로고-및-텍스트-설정&#34;&gt;&lt;strong&gt;2.6.&lt;/strong&gt; 블로그 상단 로고 및 텍스트 설정&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -589,7 +589,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;27-프로필모드-설정-profilemode&#34;&gt;&lt;strong&gt;2.7&lt;/strong&gt;. 프로필모드 설정 (&lt;code&gt;[profileMode]&lt;/code&gt;)&lt;/h2&gt;
+&lt;h2 id=&#34;27-프로필모드-설정-profilemode&#34;&gt;&lt;strong&gt;2.7.&lt;/strong&gt; 프로필모드 설정 (&lt;code&gt;[profileMode]&lt;/code&gt;)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -637,7 +637,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;28-홈-화면-인사말-일반-블로그-스타일-paramshomeinfoparams&#34;&gt;&lt;strong&gt;2.8. 홈 화면 인&lt;/strong&gt;사말 (일&lt;strong&gt;반 블로그 스타일) (&lt;code&gt;[params.homeInfoParams]&lt;/code&gt;)&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;28-홈-화면-인사말-일반-블로그-스타일-paramshomeinfoparams&#34;&gt;&lt;strong&gt;2.8.&lt;/strong&gt; 홈 화면 인사말 (일반 블로그 스타일) (&lt;code&gt;[params.homeInfoParams]&lt;/code&gt;)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -657,7 +657,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;29-소셜-미디어-아이콘-paramssocialicons&#34;&gt;&lt;strong&gt;2.9. 소셜 미디어 아이콘 (&lt;code&gt;[[params.socialIcons]]&lt;/code&gt;)&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;29-소셜-미디어-아이콘-paramssocialicons&#34;&gt;&lt;strong&gt;2.9.&lt;/strong&gt; 소셜 미디어 아이콘 (&lt;code&gt;[[params.socialIcons]]&lt;/code&gt;)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -677,7 +677,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;210-seo-및-검색-엔진-최적화-analytics&#34;&gt;&lt;strong&gt;2.10. SEO 및 검색 엔진 최적화 (Analytics)&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;210-seo-및-검색-엔진-최적화-analytics&#34;&gt;&lt;strong&gt;2.10.&lt;/strong&gt; SEO 및 검색 엔진 최적화 (Analytics)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -693,7 +693,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;211-포스트-커버-이미지-설정&#34;&gt;&lt;strong&gt;2.11. 포스트 커버 이미지 설정&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;211-포스트-커버-이미지-설정&#34;&gt;&lt;strong&gt;2.11.&lt;/strong&gt; 포스트 커버 이미지 설정&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -717,7 +717,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;212-검색-기능-설정-fusejs&#34;&gt;&lt;strong&gt;2.12. 검색 기능 설정 (&lt;code&gt;fuse.js&lt;/code&gt;)&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;212-검색-기능-설정-fusejs&#34;&gt;&lt;strong&gt;2.12.&lt;/strong&gt; 검색 기능 설정 (&lt;code&gt;fuse.js&lt;/code&gt;)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -761,7 +761,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;213-syntax-highlighting-chroma&#34;&gt;&lt;strong&gt;2.13. Syntax Highlighting (&lt;code&gt;Chroma&lt;/code&gt;)&lt;/strong&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;213-syntax-highlighting-chroma&#34;&gt;&lt;strong&gt;2.13.&lt;/strong&gt; Syntax Highlighting (&lt;code&gt;Chroma&lt;/code&gt;)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
@@ -801,7 +801,7 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;214-html-활성화-markupgoldmarkrenderer&#34;&gt;&lt;strong&gt;2.14&lt;/strong&gt;. HTML 활성화 (&lt;code&gt;[markup.goldmark.renderer]&lt;/code&gt;)&lt;/h2&gt;
+&lt;h2 id=&#34;214-html-활성화-markupgoldmarkrenderer&#34;&gt;&lt;strong&gt;2.14.&lt;/strong&gt; HTML 활성화 (&lt;code&gt;[markup.goldmark.renderer]&lt;/code&gt;)&lt;/h2&gt;
 &lt;table&gt;
   &lt;thead&gt;
       &lt;tr&gt;
