@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Son-Dongwoo&#39;s Blog</title>
-    <link>https://son-dongwoo.github.io/posts/</link>
-    <description>Recent content in Posts on Son-Dongwoo&#39;s Blog</description>
+    <title>GitBlog on Son-Dongwoo&#39;s Blog</title>
+    <link>https://son-dongwoo.github.io/tags/gitblog/</link>
+    <description>Recent content in GitBlog on Son-Dongwoo&#39;s Blog</description>
     <image>
       <title>Son-Dongwoo&#39;s Blog</title>
       <url>https://son-dongwoo.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
@@ -12,7 +12,7 @@
     <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 04 Feb 2025 23:33:13 +0900</lastBuildDate>
-    <atom:link href="https://son-dongwoo.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://son-dongwoo.github.io/tags/gitblog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hugo.toml 설정</title>
       <link>https://son-dongwoo.github.io/posts/hugo.toml-setting/</link>
