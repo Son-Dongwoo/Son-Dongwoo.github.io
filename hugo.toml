@@ -2,21 +2,138 @@ baseURL = "https://son-dongwoo.github.io/"
 languageCode = "en-us"
 title = "Son-Dongwoo's Blog"
 theme = "PaperMod"
+paginate = 5
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+pygmentsUseClasses = true
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+
+[minify]
+disableXML = true
+minifyOutput = true
 
 [params]
-  author = "Son-Dongwoo"
-  description = "Welcome to my blog!"
-  showDate = true
-  showReadingTime = true
-  assets.disableFingerprinting=true
+env = "production" # to enable google analytics, opengraph, twitter-cards and schema.
+title = "ExampleSite"
+description = "Welcome to my blog!"
+keywords = [ "Blog", "Portfolio", "PaperMod" ]
+author = "Son-Dongwoo"
+# author = ["Me", "You"] # multiple authors
+images = [ "<link or path of image for opengraph, twitter-cards>" ]
+DateFormat = "January 2, 2006"
+defaultTheme = "dark" # auto, dark, light
+disableThemeToggle = false
+ShowReadingTime = true
+ShowShareButtons = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = true
+ShowRssButtonInSectionTermList = false
+UseHugoToc = true
+disableSpecial1stPost = false
+disableScrollToTop = true
+comments = true
+hidemeta = false
+hideSummary = false
+showtoc = true
+showDate = true
+tocopen = false
 
 [menu]
-  [[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
+	[[menu.main]]
+		identifier = "posts"
+		name = "posts"
+		url = "/posts/"
+		weight = 10
 
   [[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 2
+		identifier = "projects"
+		name = "projects"
+		url = "/projects/"
+		weight = 20
+
+	[[menu.main]]
+		identifier = "tags"
+		name = "tags"
+		url = "/tags/"
+		weight = 30
+
+[params.assets]
+# disableHLJS = true # to disable highlight.js
+disableFingerprinting = true
+favicon = "<link / abs url>"
+favicon16x16 = "<link / abs url>"
+favicon32x32 = "<link / abs url>"
+apple_touch_icon = "<link / abs url>"
+safari_pinned_tab = "<link / abs url>"
+
+[params.label]
+text = "Son-Dongwoo's Blog"
+icon = "/apple-touch-icon.png"
+iconHeight = 35
+
+[params.profileMode]
+enabled = false
+title = "Son-Dongwoo"
+subtitle = "Robotics & AI Enthusiast"
+# imageUrl = "<img location>"
+imageWidth = 120
+imageHeight = 120
+imageTitle = "My Profile Image"
+
+	[[params.profileMode.buttons]]
+		name = "Blog"
+    url = "posts"
+	
+	[[params.profileMode.buttons]]
+		name = "Projects"
+    url = "projects"
+	
+	[params.homeInfoParams]
+		Title = "Hi there 👋"
+		Content = "Welcome to my blog"
+	
+	[[params.socialIcons]]
+		name = "x"
+		url = "https://x.com/"
+	
+	[[params.socialIcons]]
+		name = "github"
+		url = "https://github.com/"
+	
+[params.analytics.google]
+SiteVerificationTag = "XYZabc"
+
+[params.cover]
+hidden = false # hide everywhere but not in structured data
+hiddenInList = false # hide on list pages and home
+hiddenInSingle = false # hide on single page
+
+# for search
+# https://fusejs.io/api/options.html
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.5
+minMatchCharLength = 0
+limit = 15
+keys = [ "title", "permalink", "summary", "content" ]
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+[markup.highlight]
+noClasses = false
+anchorLineNos = false
+codeFences = true
+guessSyntax = false
+lineNos = true
+style = "github"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
