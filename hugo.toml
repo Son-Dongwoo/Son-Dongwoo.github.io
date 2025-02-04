@@ -2,7 +2,10 @@ baseURL = "https://son-dongwoo.github.io/"
 languageCode = "en-us"
 title = "Son-Dongwoo's Blog"
 theme = "PaperMod"
-paginate = 5
+
+[pagination]
+pagerSize = 5
+
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
@@ -30,7 +33,7 @@ ShowShareButtons = false
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
-ShowWordCount = true
+ShowWordCount = false
 ShowRssButtonInSectionTermList = false
 UseHugoToc = true
 disableSpecial1stPost = false
@@ -45,19 +48,19 @@ tocopen = false
 [menu]
 	[[menu.main]]
 		identifier = "posts"
-		name = "posts"
+		name = "📝 posts"
 		url = "/posts/"
 		weight = 10
 
   [[menu.main]]
 		identifier = "projects"
-		name = "projects"
+		name = "🚀 projects"
 		url = "/projects/"
 		weight = 20
 
 	[[menu.main]]
 		identifier = "tags"
-		name = "tags"
+		name = "🏷️ tags"
 		url = "/tags/"
 		weight = 30
 
@@ -78,7 +81,7 @@ iconHeight = 35
 [params.profileMode]
 enabled = false
 title = "Son-Dongwoo"
-subtitle = "Robotics & AI Enthusiast"
+subtitle = "I'm Interested in Robot Learning & Deep Reinforcement Learning"
 # imageUrl = "<img location>"
 imageWidth = 120
 imageHeight = 120
@@ -94,7 +97,7 @@ imageTitle = "My Profile Image"
 	
 	[params.homeInfoParams]
 		Title = "Hi there 👋"
-		Content = "Welcome to my blog"
+		Content = "💭 I'm Interested in<br>|🔎 Deep Reinforcement Learning<br>|🔎 Robot Learning"
 	
 	[[params.socialIcons]]
 		name = "x"
@@ -102,7 +105,7 @@ imageTitle = "My Profile Image"
 	
 	[[params.socialIcons]]
 		name = "github"
-		url = "https://github.com/"
+		url = "https://github.com/Son-Dongwoo"
 	
 [params.analytics.google]
 SiteVerificationTag = "XYZabc"

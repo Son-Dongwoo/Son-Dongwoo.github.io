@@ -2,6 +2,16 @@
 date = '2025-02-04T23:33:13+09:00'
 draft = false
 title = 'hugo.toml 설정'
+
+tags = ["GitBlog", "Hugo"]
+description = ""
+
+[cover]
+image = ""  # 같은 폴더 내 이미지 사용
+alt = "" # alt text, 대체 텍스트
+caption = "" # Image caption
+relative = true  # when using page bundles set this to true, 페이지 번들 내부 이미지 사용
+hidden = false
 +++
 
 # 1. hugo.toml
@@ -13,7 +23,10 @@ baseURL = "https://son-dongwoo.github.io/"
 languageCode = "en-us"
 title = "Son-Dongwoo's Blog"
 theme = "PaperMod"
-paginate = 5
+
+[pagination]
+pagerSize = 5
+
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
@@ -37,11 +50,11 @@ DateFormat = "January 2, 2006"
 defaultTheme = "dark" # auto, dark, light
 disableThemeToggle = false
 ShowReadingTime = true
-ShowShareButtons = true
+ShowShareButtons = false
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
-ShowWordCount = true
+ShowWordCount = false
 ShowRssButtonInSectionTermList = false
 UseHugoToc = true
 disableSpecial1stPost = false
@@ -89,7 +102,7 @@ iconHeight = 35
 [params.profileMode]
 enabled = false
 title = "Son-Dongwoo"
-subtitle = "Robotics & AI Enthusiast"
+subtitle = "I'm Interested in Robot Learning & Deep Reinforcement Learning"
 # imageUrl = "<img location>"
 imageWidth = 120
 imageHeight = 120
@@ -105,7 +118,7 @@ imageTitle = "My Profile Image"
 	
 	[params.homeInfoParams]
 		Title = "Hi there 👋"
-		Content = "Welcome to my blog"
+		Content = "💭 I'm Interested in<br>|🔎 Deep Reinforcement Learning<br>|🔎 Robot Learning"
 	
 	[[params.socialIcons]]
 		name = "x"
@@ -113,7 +126,7 @@ imageTitle = "My Profile Image"
 	
 	[[params.socialIcons]]
 		name = "github"
-		url = "https://github.com/"
+		url = "https://github.com/Son-Dongwoo"
 	
 [params.analytics.google]
 SiteVerificationTag = "XYZabc"
@@ -161,7 +174,7 @@ style = "github"
 | `languageCode` | 사이트의 기본 언어 (`en-us`: 영어, `ko-kr`: 한국어) |
 | `title` | 블로그 제목 (`Son-Dongwoo's Blog`) |
 | `theme` | 사용 테마 (`PaperMod`) |
-| `paginate` | 한 페이지에 표시할 포스트 수 (기본값: `5`) |
+| `[pagination]`<br>`pagerSize = 5` | 한 페이지에 표시할 포스트 수 (기본값: `5`) <br><br> ⚠️ Hugo 0.143.0 부터 `paginate` 소멸|
 | `enableRobotsTXT` | `true`이면 `robots.txt` 파일 자동 생성 (SEO 최적화에 필요) |
 | `buildDrafts` | `true`이면 `draft: true`인 포스트도 빌드됨 (기본값: `false`) |
 | `buildFuture` | `true`이면 미래 날짜의 포스트도 빌드됨 |
@@ -169,7 +182,7 @@ style = "github"
 
 ---
 
-## **2.2.** HTML 파일 최적화 (Minification,** `[minify]`**)
+## **2.2.** HTML 파일 최적화 (Minification,`[minify]`)
 
 | **파라미터** | **설명** |
 | --- | --- |

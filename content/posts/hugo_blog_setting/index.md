@@ -2,6 +2,16 @@
 date = '2025-01-27T05:53:09+09:00'
 draft = false
 title = 'Hugo를 이용한 Git Blog 구축하기'
+
+tags = ["GitBlog", "Hugo"]
+description = ""
+
+[cover]
+image = ""  # 같은 폴더 내 이미지 사용
+alt = "" # alt text, 대체 텍스트
+caption = "" # Image caption
+relative = true  # when using page bundles set this to true, 페이지 번들 내부 이미지 사용
+hidden = false
 +++
 
 - Hugo를 선택한 이유: 속도가 가장 빠르니께!
@@ -15,13 +25,13 @@ title = 'Hugo를 이용한 Git Blog 구축하기'
 | **Zola** | 빠름 | 중간 | 간단 | 적음 | 직관적 블로그 |
 | **Pelican** | 중간 | 중간 | 간단 | 적음 | Python 활용 블로그 |
 
-### 1. Git 설치
+### **1.** Git 설치
 
 1. [Git 공식 사이트](https://git-scm.com/)에서 Windows용 설치 파일 다운로드 및 실행. (Git-2.47.1.2-64-bit)
 
 ---
 
-### 2. **Hugo 설치**
+### **2.** Hugo 설치
 
 - **Windows**:
     1. [Hugo Releases 페이지](https://github.com/gohugoio/hugo/releases)에서 Windows용 설치 파일을 다운로드. (hugo_extended_0.142.0_windows-amd64.zip)
@@ -49,7 +59,7 @@ title = 'Hugo를 이용한 Git Blog 구축하기'
 
 ---
 
-### 3. **새로운 Hugo 사이트 생성**
+### **3.** 새로운 Hugo 사이트 생성
 
 Hugo 사이트를 생성합니다:
 
@@ -60,7 +70,7 @@ cd myblog
 
 ---
 
-### 4. **테마 설치**
+### **4.** 테마 설치
 
 - **링크**: [PaperMod GitHub](https://github.com/adityatelange/hugo-PaperMod)
 - **특징**:
@@ -90,7 +100,7 @@ theme = "PaperMod"
 
 ---
 
-### 5. **로컬에서 실행**
+### **5.** 로컬에서 실행
 
 테마가 적용되었는지 확인하기 위해 서버 실행
 
@@ -102,7 +112,7 @@ hugo server -D
 
 ---
 
-### 6. **블로그 커스터마이징**
+### **6.** 블로그 커스터마이징
 
 1. `hugo.toml`  수정
     
@@ -197,7 +207,7 @@ theme = "PaperMod"
 
 ---
 
-### 7. **블로그 배포**
+### **7.** 블로그 배포
 
 1. 정적 파일 생성
     
@@ -256,7 +266,7 @@ theme = "PaperMod"
 
 ---
 
-### 9. 자동화 코드 작성
+### **9.** 자동화 코드 작성
 
 - Window
     
