@@ -6,12 +6,13 @@ title = 'hugo.toml 설정'
 tags = ["GitBlog", "Hugo"]
 description = ""
 
+UseHugoToc = true
+showtoc = true
+tocopen = false
+
 [cover]
-image = ""  # 같은 폴더 내 이미지 사용
-alt = "" # alt text, 대체 텍스트
-caption = "" # Image caption
+image = "images/cover.webp"  # 같은 폴더 내 이미지 사용
 relative = true  # when using page bundles set this to true, 페이지 번들 내부 이미지 사용
-hidden = false
 +++
 
 # 1. hugo.toml
@@ -337,7 +338,7 @@ style = "github"
 | **파라미터** | **설명** |
 | --- | --- |
 | `pygmentsUseClasses` | `true`이면 Syntax Highlighting을 CSS 클래스로 처리 |
-| `markup.highlight.noClasses` | `false`이면 CSS 클래스를 사용하여 하이라이트 적용 |
+| `markup.highlight.noClasses` | `true`이면 CSS 클래스를 사용하여 하이라이트 적용 |
 | `markup.highlight.anchorLineNos` | `true`이면 코드 줄 번호 앞에 앵커 추가 |
 | `markup.highlight.codeFences` | `true`이면 백틱(```)을 사용한 코드 블록 지원 |
 | `markup.highlight.guessSyntax` | `true`이면 코드 언어 자동 감지 |

@@ -28,22 +28,19 @@ images = [ "<link or path of image for opengraph, twitter-cards>" ]
 DateFormat = "January 2, 2006"
 defaultTheme = "dark" # auto, dark, light
 disableThemeToggle = false
-ShowReadingTime = true
+ShowReadingTime = false
 ShowShareButtons = false
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
 ShowCodeCopyButtons = true
 ShowWordCount = false
 ShowRssButtonInSectionTermList = false
-UseHugoToc = false
 disableSpecial1stPost = false
 disableScrollToTop = false
 comments = true
 hidemeta = false
 hideSummary = false
-showtoc = true
 showDate = true
-tocopen = false
 
 [menu]
 	[[menu.main]]
@@ -113,7 +110,7 @@ SiteVerificationTag = "XYZabc"
 [params.cover]
 hidden = false # hide everywhere but not in structured data
 hiddenInList = false # hide on list pages and home
-hiddenInSingle = false # hide on single page
+hiddenInSingle = true # hide on single page
 
 # for search
 # https://fusejs.io/api/options.html
@@ -129,12 +126,12 @@ keys = [ "title", "permalink", "summary", "content" ]
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 [markup.highlight]
-noClasses = false
+noClasses = true
 anchorLineNos = false
 codeFences = true
 guessSyntax = false
 lineNos = true
-style = "github"
+style = "monokai"
 
 [markup]
   [markup.goldmark]

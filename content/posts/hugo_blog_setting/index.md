@@ -6,12 +6,13 @@ title = 'Hugo를 이용한 Git Blog 구축하기'
 tags = ["GitBlog", "Hugo"]
 description = ""
 
+UseHugoToc = true
+showtoc = true
+tocopen = false
+
 [cover]
-image = ""  # 같은 폴더 내 이미지 사용
-alt = "" # alt text, 대체 텍스트
-caption = "" # Image caption
+image = "images/cover.webp"  # 같은 폴더 내 이미지 사용
 relative = true  # when using page bundles set this to true, 페이지 번들 내부 이미지 사용
-hidden = false
 +++
 
 - Hugo를 선택한 이유: 속도가 가장 빠르니께!

@@ -6,14 +6,13 @@ title = 'Lecture 1, Introduction'
 tags = ["Deep Reinforcement Learning"]
 description = "UC Berkeley의 CS 285 강의인 Deep Reinforcement Learning의 Lecture 1 정리"
 
-[cover]
-image = "cover.png"  # 같은 폴더 내 이미지 사용
-alt = "이것은 대표 이미지입니다." # alt text, 대체 텍스트
-caption = "" # Image caption
-relative = true  # when using page bundles set this to true, 페이지 번들 내부 이미지 사용
-hidden = false
+UseHugoToc = true
+showtoc = true
+tocopen = false
 
-showtoc = false
+[cover]
+image = "images/cover.webp"  # 같은 폴더 내 이미지 사용
+relative = true  # when using page bundles set this to true, 페이지 번들 내부 이미지 사용
 +++
 
 > 강의 자료: [UC Berkeley - Deep Reinforcement Learning](https://rail.eecs.berkeley.edu/deeprlcourse/)<br>강의 영상: [Youtube Link](https://www.youtube.com/playlist?list=PL_iWQOsE6TfVYGEGiAOMaOzzv41Jfm_Ps)
@@ -36,17 +35,12 @@ showtoc = false
     
     | 지도 학습 (Usually assumes) | 강화 학습 |
     | --- | --- |
-    | i.i.d. data | Data is **not** i.i.d.
-    → previous outputs influence future inputs! |
-    | known ground truth outputs in training | Ground truth answer is not known, only know if we succeeded or failed
-    → more generally, we know the reward |
+    | i.i.d. data | Data is **not** i.i.d.<br>→ previous outputs influence future inputs! |
+    | known ground truth outputs in training | Ground truth answer is not known, only know if we succeeded or failed<br>→ more generally, we know the reward |
 
-<aside>
-💡
+<aside style="border-radius: var(--radius); background:var(--code-bg); padding:5px; border-left:5px solid #f1c40f;">  
 
-What is **i.i.d. data**?
-i.i.d. (independent and identically distributed)
-
+💡What is **i.i.d. data (independent and identically distributed)**?  
 - **Independent (독립성):** 각 데이터 샘플은 서로 독립적이다. 즉, 한 샘플이 다른 샘플에 영향을 주지 않는다.
 - **Identically Distributed (동일 분포):** 모든 데이터 샘플은 동일한 확률 분포에서 추출된다. 이는 데이터가 일정한 분포를 따르고 있다는 것을 의미한다.
 </aside>
@@ -55,7 +49,7 @@ i.i.d. (independent and identically distributed)
 
 - 강화 학습은 Complex physical tasks를 잘한다.
 
-- 리처드 서튼의 [**The Bitter Lesson](http://incompleteideas.net/IncIdeas/BitterLesson.html)** 읽어보기
+- 리처드 서튼의 **[The Bitter Lesson](http://incompleteideas.net/IncIdeas/BitterLesson.html)** 읽어보기
     - Learning: use data to extract patterns (Deep Learning)
     - Search: use computation to extract inferences (Optimization)
 

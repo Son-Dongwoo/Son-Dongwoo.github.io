@@ -72,7 +72,7 @@
 
   <div style="flex: 1; display: flex; flex-direction: column; justify-content: space-between;">
     <header class="entry-header">
-      <h2 class="entry-hint-parent" style="margin: 0;">
+      <h2 class="entry-hint-parent">
         {{- .Title }}
         {{- if .Draft }}
         <span class="entry-hint" title="Draft">
@@ -86,7 +86,7 @@
     </header>
   
     {{- if (ne (.Param "hideSummary") true) }}
-    <div class="entry-content">
+    <div class="entry-content" >
       <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
     </div>
     {{- end }}
