@@ -16,8 +16,8 @@ hidden = false
 
 # 1. hugo.toml
 
-[출처: [antifragile blog](https://xntifrxgile.tistory.com/71#%EA%B8%80%20%EC%9E%91%EC%84%B1-1)]
-
+[참고: [antifragile blog](https://xntifrxgile.tistory.com/71#%EA%B8%80%20%EC%9E%91%EC%84%B1-1)]  
+[[블로그 hugo.toml 보기]](https://github.com/Son-Dongwoo/Son-Dongwoo.github.io/blob/main/hugo.toml)
 ```toml
 baseURL = "https://son-dongwoo.github.io/"
 languageCode = "en-us"
