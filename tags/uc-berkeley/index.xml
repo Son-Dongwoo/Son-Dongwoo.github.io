@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>UC Berkeley on Son-Dongwoo&#39;s Blog</title>
+    <link>http://localhost:1313/tags/uc-berkeley/</link>
+    <description>Recent content in UC Berkeley on Son-Dongwoo&#39;s Blog</description>
+    <image>
+      <title>Son-Dongwoo&#39;s Blog</title>
+      <url>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:1313/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.142.0</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 05 Feb 2025 01:10:32 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/uc-berkeley/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Lecture 1</title>
+      <link>http://localhost:1313/posts/lecture-1/</link>
+      <pubDate>Wed, 05 Feb 2025 01:10:32 +0900</pubDate>
+      <guid>http://localhost:1313/posts/lecture-1/</guid>
+      <description>&lt;h1 id=&#34;lecture-1-introduction&#34;&gt;Lecture 1, Introduction&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;강의 자료: &lt;a href=&#34;https://rail.eecs.berkeley.edu/deeprlcourse/&#34;&gt;UC Berkeley - Deep Reinforcement Learning&lt;/a&gt;&lt;br&gt;강의 영상: &lt;a href=&#34;https://www.youtube.com/playlist?list=PL_iWQOsE6TfVYGEGiAOMaOzzv41Jfm_Ps&#34;&gt;Youtube Link&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;강화 학습은 &lt;strong&gt;사람이 생각하지 못하는 새로운 해결책&lt;/strong&gt;을 제시할 수 있다. 그렇기에 강화 학습은 공부할 가치가 충분하다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;강화 학습은 2가지 의미로 정의되며, 각 내용은 분리된 정의이다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;학습 기반 의사 결정을 위한 수학적 형식 주의&lt;/p&gt;
+&lt;p&gt;→ Mathematical formalism for learning-based decision making&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;경험으로부터 의사 결정과 제어를 학습하는 접근 방식&lt;/p&gt;
+&lt;p&gt;→ Approach for learning decision making and control from experience&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;지도 학습과 강화 학습의 차이&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
