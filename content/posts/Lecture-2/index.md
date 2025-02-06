@@ -22,11 +22,11 @@ relative = true  # when using page bundles set this to true, 페이지 번들 �
     - $\mathbf{s}_t$: state
     - $\mathbf{o}_t$: observation
     - $\mathbf{a}_t$: action
-    - $\pi_\theta(\mathbf{a}_t | \mathbf{o}_t)$: policy
-    - $\pi_\theta(\mathbf{a}_t | \mathbf{s}_t)$: policy (fully observed)
+    - $\pi_\theta(\mathbf{a}_t \mid \mathbf{o}_t)$: policy
+    - $\pi_\theta(\mathbf{a}_t \mid \mathbf{s}_t)$: policy (fully observed)
     
     - $s_t$와 $o_t$는 별개이다. 단, Imitation Learning에서는 대부분 같다.
-    - $o_t$에서 $s_t$ 를 완전히 추론하지 못하는 경우도 있다. 예를 들어, 아래 이미지에서 치타를 추론하고자 한다. 자동차에 가려져 있어 치타를 추론하지 못할 수 있다.
+    - $o_t$에서 $s_t$를 완전히 추론하지 못하는 경우도 있다. 예를 들어, 아래 이미지에서 치타를 추론하고자 한다. 자동차에 가려져 있어 치타를 추론하지 못할 수 있다.
         
         ![image-1.jpg](images/image-1.png)
         
@@ -36,7 +36,6 @@ relative = true  # when using page bundles set this to true, 페이지 번들 �
     - 미래는 현재에 따라 결정된다. 과거와 무관하다.
 
 - 강화 학습에서의 표기법과 로봇&제어에서의 표기법
-    
     
     |  | 강화 학습 | 로봇&제어 |
     | --- | --- | --- |
@@ -65,29 +64,37 @@ relative = true  # when using page bundles set this to true, 페이지 번들 �
     - 수학적 분석을 위해 몇 가지 가정을 한다.
         1. 학습된 정책 확률 분포의 좋고 나쁨을 판단하기 위해 cost function(reward function)을 정의한다.
             
-            $c(\mathbf{s}_t,\mathbf{a}_t) = 
+            $$ 
+            c(\mathbf{s}_t,\mathbf{a}_t) = 
             \begin{cases} 
-            0 & \text{if } \mathbf{a}_t = \pi^*(\mathbf{s}) \\ 
-            1 & \text{otherwise} 
-            \end{cases}$
-             ($\pi^*(\mathbf{s})$은 운전자의 행동이 최적이라고 가정)
+            0 & \text{if } \mathbf{a}_t = \pi^*(\mathbf{s}), \\[1mm]
+            1 & \text{otherwise}
+            \end{cases}
+            $$
             
-        2. 학습의 목적을 cost function의 최대화로 설정한다.
+            ($\pi^*(\mathbf{s})$은 운전자의 행동이 최적이라고 가정)
             
-            $\text{Goal: minimize } \mathbb{E}_{\mathbf{s}_t \sim p_{\pi_\theta}(\mathbf{s}_t)} \left[ c(\mathbf{s}_t, \mathbf{a}_t) \right]$
+        2. 학습의 목적을 cost function의 최소화로 설정한다.
             
-        3. 작은 실수 확률 $\epsilon$ 정의: train data set에 등장하는 상태 $\mathbf{s}$에서는 운전자의 행동 $\pi^*(s)$와 다른 행동을 할 확률이 $\epsilon$ 이하라고 가정한다. $\epsilon$은 작지만 0이 아닌 확률이기에 ‘실수가 발생할 수 있을’을 의미한다.
+            $$
+            \text{Goal: minimize } \mathbb{E}_{\mathbf{s}_t \sim p_{\pi_\theta}(\mathbf{s}_t)} \bigl[ c(\mathbf{s}_t, \mathbf{a}_t) \bigr]
+            $$
             
-            $\text{assume}: \pi_\theta(\mathbf{a} \neq \pi^*(\mathbf{s})|\mathbf{s}) \leq \epsilon
-            \\\text{for all } \mathbf{s} \in \mathcal{D}_{train}$
+        3. 작은 실수 확률 $\epsilon$ 정의: train data set에 등장하는 상태 $\mathbf{s}$에서는 운전자의 행동 $\pi^*(\mathbf{s})$와 다른 행동을 할 확률이 $\epsilon$ 이하라고 가정한다. $\epsilon$은 작지만 0이 아닌 확률이기에 ‘실수가 발생할 수 있음’을 의미한다.
             
+            $$
+            \text{assume}: \quad \pi_\theta\bigl(\mathbf{a} \neq \pi^*(\mathbf{s}) \mid \mathbf{s}\bigr) \leq \epsilon \quad \text{for all } \mathbf{s} \in \mathcal{D}_{\text{train}}
+            $$
         
     - $T$에 대한 cost 계산
         
-        $E[\sum_t{c(\mathbf{s}_t, \mathbf{a}_t)}] \leq \epsilon T + (1 - \epsilon)(\epsilon (T - 1) + (1- \epsilon)(\ldots))$
-        
-        → $O(\epsilon T^2)$
-        
+        $$
+        E\Bigl[\sum_t c(\mathbf{s}_t, \mathbf{a}_t)\Bigr] \leq \epsilon T + (1 - \epsilon)\Bigl(\epsilon (T - 1) + (1- \epsilon)(\ldots)\Bigr)
+        $$
+
+        $$
+        → O(\epsilon T^2)
+        $$
 
 <aside style="border-radius: var(--radius); background:var(--code-bg); padding:5px 10px; margin-bottom:10px; border-left:5px solid #f1c40f;">
 💡계산 방식
@@ -116,64 +123,55 @@ relative = true  # when using page bundles set this to true, 페이지 번들 �
 ![image-7.jpg](images/image-7.jpg)
 
 - [Total Variation Distance(TV Norm)](https://blog.naver.com/ycpiglet/223087981574)를 활용한 수식 변형
-    - TV Norm은 두 분포는 얼마나 차이나는가?를 판단한다. 두 분포의 거리의 최댓값을 나타내며, Norm이 0에 가까워지면 두 분포가 근사적으로 일치함을 의미한다.
+    - TV Norm은 두 분포가 얼마나 차이나는가를 판단한다. Norm이 0에 가까워지면 두 분포가 근사적으로 일치함을 의미한다.
     - 학습된 분포와 train data set 사이의 차이를 확인한다.
-        $\begin{aligned}
-        \left| p_\theta(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t) \right| 
-        &= |(1 - \epsilon)^t p_{\text{train}}(\mathbf{s}_t) + (1 - (1 - \epsilon)^t)p_{\text{mistake}}(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t)| \\
-        &= |-(1 - (1 - \epsilon)^t)p_{\text{train}}(\mathbf{s}_t) + (1 - (1 - \epsilon)^t)p_{\text{mistake}}(\mathbf{s}_t)| \\
-        &= |(1 - (1 - \epsilon)^t)(p_{\text{mistake}}(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t))| \\
-        &= (1 - (1 - \epsilon)^t) \left| p_{\text{mistake}}(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t) \right|
-        \end{aligned}$
+    
+    $$ 
+    \begin{aligned}
+    \left| p_\theta(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t) \right| 
+    &= \Bigl|(1 - \epsilon)^t \, p_{\text{train}}(\mathbf{s}_t) + \Bigl(1 - (1 - \epsilon)^t\Bigr) \, p_{\text{mistake}}(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t)\Bigr| \\
+    &= \Bigl| -\Bigl(1 - (1 - \epsilon)^t\Bigr) \, p_{\text{train}}(\mathbf{s}_t) + \Bigl(1 - (1 - \epsilon)^t\Bigr) \, p_{\text{mistake}}(\mathbf{s}_t) \Bigr| \\
+    &= \Bigl|(1 - (1 - \epsilon)^t) \Bigl(p_{\text{mistake}}(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t)\Bigr)\Bigr| \\
+    &= (1 - (1 - \epsilon)^t) \left| p_{\text{mistake}}(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t) \right|
+    \end{aligned}
+    $$
         
-    - $(1 - \epsilon)^t \geq 1 - \epsilon t \text{ for } \epsilon \in [0, 1]$ 임을 활용하여 $1-(1-\epsilon)^t \approx \epsilon t$를 계산한다.
-        
-        $\begin{aligned}
-        (1-\epsilon)^t &\geq 1 - \epsilon t \\
-        &\Rightarrow -1+(1-\epsilon)^t \geq - \epsilon t \\
-        &\Rightarrow 1 - (1-\epsilon)^t \leq \epsilon t \\
-        &\therefore 1-(1-\epsilon)^t \approx \epsilon t
-        \end{aligned}$
+    - $(1 - \epsilon)^t \geq 1 - \epsilon t$ for $\epsilon \in [0, 1]$를 활용하여 
+      
+      $$ 
+      \begin{aligned}
+      (1-\epsilon)^t &\geq 1 - \epsilon t, \\
+      \Rightarrow 1 - (1-\epsilon)^t &\leq \epsilon t, \\
+      &\text{따라서 } 1-(1-\epsilon)^t \approx \epsilon t.
+      \end{aligned}
+      $$
         
     - 즉, 아래와 같이 TV Norm을 정리할 수 있다.
+      
+      $$ 
+      \begin{aligned}
+      \left| p_\theta(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t) \right| 
+      &= \Bigl(1 - (1 - \epsilon)^t\Bigr) \left| p_{\text{mistake}}(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t) \right| \\
+      &\leq 2\Bigl(1 - (1-\epsilon)^t\Bigr) \\
+      &\leq 2 \epsilon t.
+      \end{aligned}
+      $$
         
-        $\begin{aligned}
-        \left| p_\theta(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t) \right| = (1 - (1 - \epsilon)^t) \left| p_{\text{mistake}}(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t) \right| &\leq 2(1 - (1-\epsilon)^t) \\&\leq 2 \epsilon t
-        \end{aligned}$
+    - 2배인 직관적인 이유  
+      (생략)
         
-    - 2배인 직관적인 이유
-        - $p_\theta(\mathbf{s}), p_{train}(\mathbf{s})$은 확률 분포이므로 최솟값은 0, 최댓값은 1이다.
-            
-            $0 \leq p_\theta(\mathbf{s}) \leq 1, \  0 \leq p_{train}(\mathbf{s}) \leq 1$
-            
-            단일 상태일 경우 $\left| p_\theta(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t) \right|$의 최댓값은 1이다. (한쪽이 1, 다른 쪽이 0) 
-            
-        - 그러나 분포 간의 전체 차이를 확인하자면 최댓값은 2이다.
-            
-            $\sum_s p_\theta(\mathbf{s}) = 1, \ \sum_s p_{train}(\mathbf{s}) = 1$
-            
-        - 분포 간에 전혀 겹치는 부분이 없는 경우를 가정하면 아래와 같다.
-            
-            $p_\theta(s_0) = 1, \ p_\theta(s_1) = 0$
-            
-            $p_{train}(s_0) = 0, \ p_{train}(s_1) = 1$ 
-            
-            $\sum_s \left| p_\theta(\mathbf{s}) - p_{\text{train}}(\mathbf{s}) \right| = \left| 1 - 0 \right| + \left| 0 - 1 \right| = 2$
-            
-    - 2배 뒤에 $(1 - (1-\epsilon)^t)$인 이유
-        
-        양변의 공통 계수를 맞추기 위해
-        
-    
-    - 시간 축에 대하여 cost를 모두 합산했을 때 $\sum_t \epsilon + 2 \epsilon t$를 계산할 수 있다.
-        
-        $\begin{aligned}
-        \sum_t \epsilon + 2 \epsilon t &= \epsilon \sum_t^T t + 2 \epsilon t \\
-        &= \epsilon \frac{T(T+2)}{2} + 2 \epsilon t
-        \\&= \epsilon(\frac{T(T+2)}{2} + 2t)
-        \\&\text{if T가 아주 크다면,}
-        \\&\approx O(\epsilon T^2)
-        \end{aligned}$
+    - 시간 축에 대하여 cost를 모두 합산했을 때,
+      
+      $$ 
+      \begin{aligned}
+      \sum_t \epsilon + 2 \epsilon t 
+      &= \epsilon \sum_{t=1}^{T} t + 2 \epsilon t \\
+      &= \epsilon \frac{T(T+2)}{2} + 2 \epsilon t \\
+      &= \epsilon\Bigl(\frac{T(T+2)}{2} + 2t\Bigr) \\
+      &\text{if $T$가 아주 크다면,} \\
+      &\approx O(\epsilon T^2)
+      \end{aligned}
+      $$
         
 - 결론
     - $T$가 커질 수록 $\epsilon$이 작아도 누적 cost가 엄청 커진다.
