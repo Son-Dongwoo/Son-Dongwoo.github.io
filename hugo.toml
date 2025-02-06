@@ -41,6 +41,7 @@ comments = true
 hidemeta = false
 hideSummary = false
 showDate = true
+math = true
 
 [menu]
 	[[menu.main]]
@@ -86,23 +87,23 @@ imageTitle = "My Profile Image"
 
 	[[params.profileMode.buttons]]
 		name = "Blog"
-    url = "posts"
+    	url = "posts"
 	
 	[[params.profileMode.buttons]]
 		name = "Projects"
-    url = "projects"
+    	url = "projects"
 	
 	[params.homeInfoParams]
 		Title = "Hi there 👋"
-		Content = "💭 I'm Interested in<br>|🔎 Deep Reinforcement Learning<br>|🔎 Robot Learning"
-	
-	[[params.socialIcons]]
-		name = "x"
-		url = "https://x.com/"
+		Content = "💭 I'm Interested in<br>🔎 Deep Reinforcement Learning<br>🔎 Robot Learning"
 	
 	[[params.socialIcons]]
 		name = "github"
 		url = "https://github.com/Son-Dongwoo"
+
+	[[params.socialIcons]]
+		name = "x"
+		url = "https://x.com/"
 	
 [params.analytics.google]
 SiteVerificationTag = "XYZabc"
