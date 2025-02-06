@@ -43,9 +43,10 @@ relative = true  # when using page bundles set this to true, 페이지 번들 �
     | state | $\mathbf{s}_t$ | $\mathbf{x}_t$ |
     | action | $\mathbf{a}_t$ | $\mathbf{u}_t$ |
     | 학자 | Richard Bellman(동적 프로그래밍(Dynamic Programming) 개발자) | Lev Pontryagin(최적 제어 이론(Optimal Control Theory)의 선구자) |
+
 - Behavioral cloning이 잘 안 되는 이유
-    - 근본적인 이유는 [i.i.d. property](https://www.notion.so/Lecture-1-Introduction-180c8c7ad23c80d883f6f8acaf190bff?pvs=21) 때문이다.
-    - 학습 시 $\mathbf{o}_t$ 에서의 라벨링은 $\mathbf{o}_{t+1}$ 에 영향을 미치지 않는다. 그러나 현실에서는 과거의 선택이 미래의 Observation에 영향을 미치기 때문에 결과적으로 제대로 동작하지 않는다.
+    - 근본적인 이유는 [i.i.d. property](https://son-dongwoo.github.io/posts/lecture-1/) 때문이다.
+    - 학습 시 $\mathbf{o}_t$에서의 라벨링은 $\mathbf{o}_{t+1}$에 영향을 미치지 않는다. 그러나 현실에서는 과거의 선택이 미래의 Observation에 영향을 미치기 때문에 결과적으로 제대로 동작하지 않는다.
     
     ![Images: Bojarski et al. ‘16, NVIDIA](images/image-2.png)
     
@@ -54,7 +55,6 @@ relative = true  # when using page bundles set this to true, 페이지 번들 �
     ![state를 1차원으로 표현할 수 없지만 직관적인 설명을 위해 가정하였다.](images/image-3.png)
     
     state를 1차원으로 표현할 수 없지만 직관적인 설명을 위해 가정하였다.
-    
 
 - Behavioral cloning이 잘 안 되는 이유의 이론적 배경
     - The distributional shift problem
@@ -89,7 +89,7 @@ relative = true  # when using page bundles set this to true, 페이지 번들 �
         → $O(\epsilon T^2)$
         
 
-<aside style="border-radius: var(--radius); background:var(--code-bg); padding:5px; border-left:5px solid #f1c40f;">
+<aside style="border-radius: var(--radius); background:var(--code-bg); padding:5px 10px; margin-bottom:10px; border-left:5px solid #f1c40f;">
 💡계산 방식
 
 1. 첫 스템에서 실수할 확률은 $\epsilon$ 이다. 이후 나머지 스템 $T - 1$ 전체가 실수한다고 생각하면, 기여 비용(Contribution to cost)는 $\epsilon \times T$ 이다.
