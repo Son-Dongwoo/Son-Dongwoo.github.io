@@ -5,10 +5,10 @@ Terminology & notation
 $\mathbf{s}_t$: state
 $\mathbf{o}_t$: observation
 $\mathbf{a}_t$: action
-$\pi_\theta(\mathbf{a}_t | \mathbf{o}_t)$: policy
-$\pi_\theta(\mathbf{a}_t | \mathbf{s}_t)$: policy (fully observed)
+$\pi_\theta(\mathbf{a}_t \mid \mathbf{o}_t)$: policy
+$\pi_\theta(\mathbf{a}_t \mid \mathbf{s}_t)$: policy (fully observed)
 $s_t$와 $o_t$는 별개이다. 단, Imitation Learning에서는 대부분 같다.
-$o_t$에서 $s_t$ 를 완전히 추론하지 못하는 경우도 있다. 예를 들어, 아래 이미지에서 치타를 추론하고자 한다. 자동차에 가려져 있어 치타를 추론하지 못할 수 있다.
+$o_t$에서 $s_t$를 완전히 추론하지 못하는 경우도 있다. 예를 들어, 아래 이미지에서 치타를 추론하고자 한다. 자동차에 가려져 있어 치타를 추론하지 못할 수 있다.
 반면, $s_t$에서 $o_t$로는 항상 계산 가능하다.
 Markov property
 미래는 현재에 따라 결정된다. 과거와 무관하다. 강화 학습에서의 표기법과 로봇&제어에서의 표기법
