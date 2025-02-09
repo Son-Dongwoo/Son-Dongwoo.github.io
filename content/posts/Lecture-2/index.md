@@ -45,7 +45,7 @@ relative = true  # when using page bundles set this to true, 페이지 번들 �
 
 - Behavioral cloning이 잘 안 되는 이유
     - 근본적인 이유는 [i.i.d. property](https://son-dongwoo.github.io/posts/lecture-1/) 때문이다.
-    - 학습 시 $\mathbf{o}_t$에서의 라벨링은 $\mathbf{o}_{t+1}$에 영향을 미치지 않는다. 그러나 현실에서는 과거의 선택이 미래의 Observation에 영향을 미치기 때문에 결과적으로 제대로 동작하지 않는다.
+    - 학습 시 {{< math >}}$\mathbf{o}_t${{< /math >}}에서의 라벨링은 {{< math >}}$\mathbf{o}_{t+1}${{< /math >}}에 영향을 미치지 않는다. 그러나 현실에서는 과거의 선택이 미래의 Observation에 영향을 미치기 때문에 결과적으로 제대로 동작하지 않는다.
     
     ![Images: Bojarski et al. ‘16, NVIDIA](images/image-2.png)
     
@@ -64,21 +64,21 @@ relative = true  # when using page bundles set this to true, 페이지 번들 �
     - 수학적 분석을 위해 몇 가지 가정을 한다.
         1. 학습된 정책 확률 분포의 좋고 나쁨을 판단하기 위해 cost function(reward function)을 정의한다.
             
-            $$ 
+            {{< math >}}$$ 
             c(\mathbf{s}_t,\mathbf{a}_t) = 
             \begin{cases} 
             0 & \text{if } \mathbf{a}_t = \pi^*(\mathbf{s}), \\[1mm]
             1 & \text{otherwise}
             \end{cases}
-            $$
+            $${{< /math >}}
             
-            ($\pi^*(\mathbf{s})$은 운전자의 행동이 최적이라고 가정)
+            <center>($\pi^*(\mathbf{s})$은 운전자의 행동이 최적이라고 가정)<br><br>
             
         2. 학습의 목적을 cost function의 최소화로 설정한다.
             
-            $$
+            {{< math >}}$$
             \text{Goal: minimize } \mathbb{E}_{\mathbf{s}_t \sim p_{\pi_\theta}(\mathbf{s}_t)} \bigl[ c(\mathbf{s}_t, \mathbf{a}_t) \bigr]
-            $$
+            $${{< /math >}}
             
         3. 작은 실수 확률 $\epsilon$ 정의: train data set에 등장하는 상태 $\mathbf{s}$에서는 운전자의 행동 $\pi^*(\mathbf{s})$와 다른 행동을 할 확률이 $\epsilon$ 이하라고 가정한다. $\epsilon$은 작지만 0이 아닌 확률이기에 ‘실수가 발생할 수 있음’을 의미한다.
             
@@ -126,7 +126,7 @@ relative = true  # when using page bundles set this to true, 페이지 번들 �
     - TV Norm은 두 분포가 얼마나 차이나는가를 판단한다. Norm이 0에 가까워지면 두 분포가 근사적으로 일치함을 의미한다.
     - 학습된 분포와 train data set 사이의 차이를 확인한다.
     
-    $$ 
+    {{< math >}}$$ 
     \begin{aligned}
     \left| p_\theta(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t) \right| 
     &= \Bigl|(1 - \epsilon)^t \, p_{\text{train}}(\mathbf{s}_t) + \Bigl(1 - (1 - \epsilon)^t\Bigr) \, p_{\text{mistake}}(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t)\Bigr| \\
@@ -134,28 +134,28 @@ relative = true  # when using page bundles set this to true, 페이지 번들 �
     &= \Bigl|(1 - (1 - \epsilon)^t) \Bigl(p_{\text{mistake}}(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t)\Bigr)\Bigr| \\
     &= (1 - (1 - \epsilon)^t) \left| p_{\text{mistake}}(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t) \right|
     \end{aligned}
-    $$
+    $${{< /math >}}
         
     - $(1 - \epsilon)^t \geq 1 - \epsilon t$ for $\epsilon \in [0, 1]$를 활용하여 
       
-      $$ 
+      {{< math >}}$$ 
       \begin{aligned}
       (1-\epsilon)^t &\geq 1 - \epsilon t, \\
-      \Rightarrow 1 - (1-\epsilon)^t &\leq \epsilon t, \\
-      &\text{따라서 } 1-(1-\epsilon)^t \approx \epsilon t.
+      \Rightarrow\; 1 - (1-\epsilon)^t &\leq \epsilon t, \\
+      \therefore\quad 1-(1-\epsilon)^t &\approx \epsilon t.
       \end{aligned}
-      $$
+      $${{< /math >}}
         
     - 즉, 아래와 같이 TV Norm을 정리할 수 있다.
       
-      $$ 
+      {{< math >}}$$ 
       \begin{aligned}
       \left| p_\theta(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t) \right| 
       &= \Bigl(1 - (1 - \epsilon)^t\Bigr) \left| p_{\text{mistake}}(\mathbf{s}_t) - p_{\text{train}}(\mathbf{s}_t) \right| \\
       &\leq 2\Bigl(1 - (1-\epsilon)^t\Bigr) \\
       &\leq 2 \epsilon t.
       \end{aligned}
-      $$
+      $${{< /math >}}
         
     - 2배인 직관적인 이유  
       (생략)
