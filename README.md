@@ -1,1 +1,1 @@
-# [GitBlog](https://son-dongwoo.github.io/)
+# [GitBlog Link](https://son-dongwoo.github.io/)
