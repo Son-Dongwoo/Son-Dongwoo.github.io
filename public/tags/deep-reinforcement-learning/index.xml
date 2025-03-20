@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Deep Reinforcement Learning on Son-Dongwoo&#39;s Blog</title>
     <link>https://son-dongwoo.github.io/tags/deep-reinforcement-learning/</link>
     <description>Recent content in Deep Reinforcement Learning on Son-Dongwoo&#39;s Blog</description>
-    <generator>Hugo</generator>
+    <image>
+      <title>Son-Dongwoo&#39;s Blog</title>
+      <url>https://son-dongwoo.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://son-dongwoo.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.142.0</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 05 Feb 2025 01:10:35 +0900</lastBuildDate>
     <atom:link href="https://son-dongwoo.github.io/tags/deep-reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +18,14 @@
       <link>https://son-dongwoo.github.io/posts/lecture-2/</link>
       <pubDate>Wed, 05 Feb 2025 01:10:35 +0900</pubDate>
       <guid>https://son-dongwoo.github.io/posts/lecture-2/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;강의 자료: &lt;a href=&#34;https://rail.eecs.berkeley.edu/deeprlcourse/&#34;&gt;UC Berkeley - Deep Reinforcement Learning&lt;/a&gt;&lt;br&gt;강의 영상: &lt;a href=&#34;https://www.youtube.com/playlist?list=PL_iWQOsE6TfVYGEGiAOMaOzzv41Jfm_Ps&#34;&gt;Youtube Link&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Terminology &amp;amp; notation&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;$\mathbf{s}_t$: state&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;$\mathbf{o}_t$: observation&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;$\mathbf{a}_t$: action&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;$\pi_\theta(\mathbf{a}_t \mid \mathbf{o}_t)$: policy&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;$\pi_\theta(\mathbf{a}_t \mid \mathbf{s}_t)$: policy (fully observed)&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;$s_t$와 $o_t$는 별개이다. 단, Imitation Learning에서는 대부분 같다.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;$o_t$에서 $s_t$를 완전히 추론하지 못하는 경우도 있다. 예를 들어, 아래 이미지에서 치타를 추론하고자 한다. 자동차에 가려져 있어 치타를 추론하지 못할 수 있다.&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;images/image-1.png&#34; alt=&#34;image-1.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;반면, $s_t$에서 $o_t$로는 항상 계산 가능하다.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Markov property&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;미래는 현재에 따라 결정된다. 과거와 무관하다.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;강화 학습에서의 표기법과 로봇&amp;amp;제어에서의 표기법&lt;/p&gt;</description>
+      <description>UC Berkeley의 CS 285 강의인 Deep Reinforcement Learning의 Lecture 2 정리</description>
     </item>
     <item>
       <title>Lecture 1, Introduction</title>
       <link>https://son-dongwoo.github.io/posts/lecture-1/</link>
       <pubDate>Wed, 05 Feb 2025 01:10:32 +0900</pubDate>
       <guid>https://son-dongwoo.github.io/posts/lecture-1/</guid>
-      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;강의 자료: &lt;a href=&#34;https://rail.eecs.berkeley.edu/deeprlcourse/&#34;&gt;UC Berkeley - Deep Reinforcement Learning&lt;/a&gt;&lt;br&gt;강의 영상: &lt;a href=&#34;https://www.youtube.com/playlist?list=PL_iWQOsE6TfVYGEGiAOMaOzzv41Jfm_Ps&#34;&gt;Youtube Link&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/blockquote&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;강화 학습은 &lt;strong&gt;사람이 생각하지 못하는 새로운 해결책&lt;/strong&gt;을 제시할 수 있다. 그렇기에 강화 학습은 공부할 가치가 충분하다.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;강화 학습은 2가지 의미로 정의되며, 각 내용은 분리된 정의이다.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;학습 기반 의사 결정을 위한 수학적 형식 주의&lt;/p&gt;&#xA;&lt;p&gt;→ Mathematical formalism for learning-based decision making&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;경험으로부터 의사 결정과 제어를 학습하는 접근 방식&lt;/p&gt;&#xA;&lt;p&gt;→ Approach for learning decision making and control from experience&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;지도 학습과 강화 학습의 차이&lt;/p&gt;</description>
+      <description>UC Berkeley의 CS 285 강의인 Deep Reinforcement Learning의 Lecture 1 정리</description>
     </item>
   </channel>
 </rss>
