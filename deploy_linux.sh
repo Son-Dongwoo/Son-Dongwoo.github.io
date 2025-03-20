@@ -10,6 +10,9 @@ hugo -t PaperMod
 # Navigate to the public directory
 cd public || exit
 
+# Ensure public directory is on gh-pages branch before pushing (필수!!)
+git checkout gh-pages
+
 # Add changes to git in the public folder
 git add .
 

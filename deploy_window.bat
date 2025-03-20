@@ -9,11 +9,14 @@ hugo -t PaperMod
 :: Navigate to the public directory
 cd public
 
+:: Ensure public directory is on gh-pages branch before pushing (필수!!)
+git checkout gh-pages
+
 :: Add changes to git in the public folder
 git add .
 
 :: Ask for commit message for public folder
-echo Enter commit message for gh-pages branch \(Press ENTER for default message\):
+echo Enter commit message for gh-pages branch (Press ENTER for default message):
 set /p msg_public="> "
 if "%msg_public%"=="" set msg_public=Rebuilding site on %date% %time%
 git commit -m "%msg_public%"
@@ -28,7 +31,7 @@ cd ..
 git add .
 
 :: Ask for commit message for main branch
-echo Enter commit message for main branch \(Press ENTER for default message\):
+echo Enter commit message for main branch (Press ENTER for default message):
 set /p msg_main="> "
 if "%msg_main%"=="" set msg_main=Rebuilding site on %date% %time%
 git commit -m "%msg_main%"
