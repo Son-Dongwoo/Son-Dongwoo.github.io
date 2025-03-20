@@ -1,0 +1,140 @@
+baseURL = "https://son-dongwoo.github.io/"
+languageCode = "en-us"
+title = "Son-Dongwoo's Blog"
+theme = "PaperMod"
+
+[pagination]
+pagerSize = 5
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+pygmentsUseClasses = true
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+
+[minify]
+disableXML = true
+minifyOutput = true
+
+[params]
+env = "production" # to enable google analytics, opengraph, twitter-cards and schema.
+title = "ExampleSite"
+description = "Welcome to my blog!"
+keywords = [ "Blog", "Portfolio", "PaperMod" ]
+author = "Son-Dongwoo"
+# author = ["Me", "You"] # multiple authors
+images = [ "<link or path of image for opengraph, twitter-cards>" ]
+DateFormat = "January 2, 2006"
+defaultTheme = "dark" # auto, dark, light
+disableThemeToggle = false
+ShowReadingTime = false
+ShowShareButtons = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = false
+ShowRssButtonInSectionTermList = false
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = true
+hidemeta = false
+hideSummary = false
+showDate = true
+math = true
+
+[menu]
+	[[menu.main]]
+		identifier = "posts"
+		name = "📝 posts"
+		url = "/posts/"
+		weight = 10
+
+  [[menu.main]]
+		identifier = "projects"
+		name = "🚀 projects"
+		url = "/projects/"
+		weight = 20
+
+	[[menu.main]]
+		identifier = "tags"
+		name = "🏷️ tags"
+		url = "/tags/"
+		weight = 30
+
+[params.assets]
+# disableHLJS = true # to disable highlight.js
+disableFingerprinting = true
+favicon = "<link / abs url>"
+favicon16x16 = "<link / abs url>"
+favicon32x32 = "<link / abs url>"
+apple_touch_icon = "<link / abs url>"
+safari_pinned_tab = "<link / abs url>"
+
+[params.label]
+text = "Son-Dongwoo's Blog"
+icon = "/apple-touch-icon.png"
+iconHeight = 35
+
+[params.profileMode]
+enabled = false
+title = "Son-Dongwoo"
+subtitle = "I'm Interested in Robot Learning & Deep Reinforcement Learning"
+# imageUrl = "<img location>"
+imageWidth = 120
+imageHeight = 120
+imageTitle = "My Profile Image"
+
+	[[params.profileMode.buttons]]
+		name = "Blog"
+    	url = "posts"
+	
+	[[params.profileMode.buttons]]
+		name = "Projects"
+    	url = "projects"
+	
+	[params.homeInfoParams]
+		Title = "Hi there 👋"
+		Content = "💭 I'm Interested in<br>🔎 Reinforcement Learning<br>🔎 Imitation Learning"
+	
+	[[params.socialIcons]]
+		name = "github"
+		url = "https://github.com/Son-Dongwoo"
+
+	[[params.socialIcons]]
+		name = "x"
+		url = "https://x.com/"
+	
+[params.analytics.google]
+SiteVerificationTag = "XYZabc"
+
+[params.cover]
+hidden = false # hide everywhere but not in structured data
+hiddenInList = false # hide on list pages and home
+hiddenInSingle = true # hide on single page
+
+# for search
+# https://fusejs.io/api/options.html
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.5
+minMatchCharLength = 0
+limit = 15
+keys = [ "title", "permalink", "summary", "content" ]
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+[markup.highlight]
+noClasses = true
+anchorLineNos = false
+codeFences = true
+guessSyntax = false
+lineNos = true
+style = "monokai"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
