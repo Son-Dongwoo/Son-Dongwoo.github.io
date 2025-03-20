@@ -94,8 +94,8 @@ imageTitle = "My Profile Image"
     	url = "projects"
 	
 	[params.homeInfoParams]
-		Title = "Hi there 👋👋"
-		Content = "💭 I'm Interested in<br>🔎 Reinforcement Learning<br>🔎 Imitation Learning"
+		Title = "Hi there 👋👋<br>I'm Dongwoo"
+		Content = "📖 Education<br>- B.S in Robotics from Kwangwoon University, Seoul, South Korea (2021.3 ~ )<br><br>💡 Research Experience<br>- Undergraduate Researcher at [DREAM Lab](https://sites.google.com/view/lab-dream/), Kwangwoon University (2025.3 ~ )<br><br>🌱 Club<br>- [BARAM](https://cafe.naver.com/roboticsbaram) (Robotics Academic Group).(2021.3 ~ )<br><br>💭 I'm Interested in<br>- Reinforcement Learning<br>- Imitation Learning"
 	
 	[[params.socialIcons]]
 		name = "github"
