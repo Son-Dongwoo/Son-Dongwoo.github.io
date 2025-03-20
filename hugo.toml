@@ -79,7 +79,7 @@ iconHeight = 35
 [params.profileMode]
 enabled = false
 title = "Son-Dongwoo"
-subtitle = "I'm Interested in Robot Learning & Deep Reinforcement Learning"
+subtitle = "I'm Interested in Reinforcement Learning & Imitation Learning"
 # imageUrl = "<img location>"
 imageWidth = 120
 imageHeight = 120
@@ -94,7 +94,7 @@ imageTitle = "My Profile Image"
     	url = "projects"
 	
 	[params.homeInfoParams]
-		Title = "Hi there 👋"
+		Title = "Hi there 👋👋"
 		Content = "💭 I'm Interested in<br>🔎 Reinforcement Learning<br>🔎 Imitation Learning"
 	
 	[[params.socialIcons]]
